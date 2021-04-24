@@ -1,0 +1,20 @@
+title Uusi muistiinpano spa
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over selain:
+json-muotoinen muistiinpano:
+[{content: "doggos", date: "2021-04-23T05:46:39.066Z"}]
+prefentDefault() estää lomakkeen lähetyksen eli sivua ei ladata uudelleen
+luodaan muistiinpano -> lisätään listalle -> piirretään
+lista uudelleen -> lähetetään uusi muistiinpano palvelimelle
+end note
+
+note over palvelin:
+status code 201 Created success
+content-type: application/json
+ei suoriteta muita HTTP-pyyntöjä 
+(pysytään samalla sivulla)
+end note
+
+palvelin->selain: json-muotoinen data

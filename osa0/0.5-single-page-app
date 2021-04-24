@@ -1,0 +1,33 @@
+title Single Page App
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+
+note over palvelin:
+status code 200 OK 
+(successful HTTP request)
+end note
+
+palvelin->selain: HTML-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+
+note over selain:
+saa tyylin määrittelevän tiedoston css
+end note
+
+palvelin->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+note over selain:
+javaScript-koodin haku -> tekee GET:in 
+json-raakadatan palauttavaan osoitteeseen
+end note
+
+palvelin->selain: spa.js
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin->selain: data.json
+
+note over selain:
+suorittaa tapahtumakäsittelijän, joka renderöi
+DOM-apin avulla muistiinpanot ruudulle
+end note
+

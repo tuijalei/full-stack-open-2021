@@ -1,0 +1,27 @@
+title Uusi muistiinpano
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over selain:
+data lähetetään bodynä
+end note
+
+palvelin->selain: HTML-koodi
+
+note over palvelin:
+302 statuskoodi: redirectaus {location: /exampleapp/notes}
+Saa aikaan main.css, main.js ja data.jsonin haun GETillä
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+
+
+note over selain:
+suoritetaan main.js, jotta saadaan data.json palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin->selain: [{content: "Awwwwwyeah", date: "2021-04-22T16:35:28.474Z"}]
