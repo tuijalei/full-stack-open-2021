@@ -1,39 +1,29 @@
 {
   "persons": [
     {
+      "name": "Dan Abromov",
+      "number": "132465",
+      "id": 9
+    },
+    {
+      "name": "Juhani",
+      "number": "4562584",
+      "id": 11
+    },
+    {
       "name": "Arto Hellas",
-      "number": "040-524-1254",
-      "id": 1
+      "number": "1654949",
+      "id": 13
     },
     {
-      "name": "Ada Lovelace",
-      "number": "39-44-5323523",
-      "id": 2
+      "name": "Tiia Mäkelä",
+      "number": "16465132",
+      "id": 15
     },
     {
-      "name": "Dan Abramov",
-      "number": "12-43-234345",
-      "id": 3
-    },
-    {
-      "name": "Mary Poppendieck",
-      "number": "39-23-6423122",
-      "id": 4
-    },
-    {
-      "name": "Martti Mäkelä",
-      "number": "040-1234-123",
-      "id": 5
-    },
-    {
-      "name": "Arto Mäkelä",
-      "number": "050-8521-123",
-      "id": 6
-    },
-    {
-      "name": "Minna Hiiri",
-      "number": "050-1548-456",
-      "id": 7
+      "name": "Mikko Mallikas",
+      "number": "7864321",
+      "id": 18
     }
   ]
 }

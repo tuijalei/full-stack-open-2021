@@ -3,7 +3,6 @@ import React from 'react'
 // Adding a new contact to phonebook
 const PersonForm = (props) => {
     const {name, handleNames, number,  handleNumbers, addName} = props
-
     return(
         <form onSubmit={addName}>
             <div>Name: 

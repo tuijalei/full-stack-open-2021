@@ -1,18 +1,20 @@
 import React from 'react' 
 import Contact from './Contact'
+import personsService from '../services/persons.js'
 
 // Showing all contacts or searched ones
 const Persons = (props) => {
-    const {persons, searchFilter, setPersons} = props
-    
-      const filterThroughNames = searchFilter
+    const {persons, searchFilter, deleteContact} = props
+
+    //If search is used
+    const filterThroughNames = searchFilter
         ? persons.filter(person => person.name.toLowerCase().includes(searchFilter.toLowerCase()))
         : persons
 
     return(
         <div>
-            {filterThroughNames.map(contact => 
-                <Contact key={contact.id} name={contact.name} number={contact.number} persons={persons} setPersons={setPersons}/>
+            {filterThroughNames.map(contact =>
+                <Contact key={contact.id} id={contact.id} name={contact.name} number={contact.number} deleteContact={deleteContact}/>
             )}
         </div>
     )  
