@@ -1,6 +1,5 @@
 import React from 'react' 
 import Contact from './Contact'
-import personsService from '../services/persons.js'
 
 // Showing all contacts or searched ones
 const Persons = (props) => {
